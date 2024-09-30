@@ -1,0 +1,119 @@
+/* General styles for the reels */
+.reels {
+  display: flex;
+  justify-content: space-around; /* Space out the reels evenly */
+  align-items: flex-start; /* Align items to the start */
+  margin: 20px 0; /* Add some margin for spacing */
+  flex-wrap: wrap; /* Ensure wrapping on very small screens */
+}
+
+/* Styles for each reel container */
+.reel-container {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  width: 120px; /* Fixed width for the reel */
+  height: 200px; /* Fixed height for the reel */
+  overflow: hidden; /* Hide overflowing content */
+  display: flex; /* Flex display for centering */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Position relative for absolute positioning of items */
+  margin: 0 10px; /* Small margin between reels */
+}
+
+/* Styles for reel items */
+.reel-item {
+  width: 100%; /* Full width of the container */
+  height: 100px; /* Fixed height for items */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  transition: transform 0.5s ease; /* Smooth transition for spinning */
+}
+
+/* Styles for images inside the reel items */
+.reel-item img {
+  max-width: 90%; /* Keep image within bounds */
+  max-height: 90%; /* Keep image within bounds */
+  object-fit: contain; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+/* Styles for the no-reward icon */
+.no-reward-icon {
+  width: 80%; /* Responsive size for no-reward icon */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0.5; /* Dimmed for no reward */
+  filter: grayscale(100%); /* Grayscale effect for no reward */
+}
+
+/* Centering class for reel items */
+.centered {
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* Keyframes for spin animation */
+@keyframes spin {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-150%); }
+}
+
+/* Spinning effect for images */
+.reel-item.spinning img {
+  animation: spin 0.5s infinite linear; /* Spin animation */
+}
+
+/* Responsive adjustments for mobile screens */
+
+/* For screens with a width of 768px or less (tablets and mobiles) */
+@media (max-width: 768px) {
+  /* Adjust reel container size for smaller screens */
+  .reel-container {
+    width: 100px; /* Slightly smaller width */
+    height: 160px; /* Slightly smaller height */
+  }
+
+  /* Adjust spacing between reels */
+  .reels {
+    margin: 15px 0;
+  }
+
+  /* Reduce item size within reels */
+  .reel-item {
+    height: 80px;
+  }
+
+}
+
+/* For screens with a width of 480px or less (mobile phones) */
+@media (max-width: 480px) {
+  /* Further reduce reel size for mobile */
+  .reel-container {
+    width: 80px;
+    height: 140px;
+    margin: 0 5px; /* Reduce margin between reels */
+  }
+
+  /* Further reduce item size within reels */
+  .reel-item {
+    height: 70px;
+  }
+
+}
+
+/* For ultra-small screens (320px or less) */
+@media (max-width: 320px) {
+  /* Further reduce reel container size */
+  .reel-container {
+    width: 70px;
+    height: 120px;
+  }
+
+  /* Further reduce reel item size */
+  .reel-item {
+    height: 60px;
+  }
+
+}

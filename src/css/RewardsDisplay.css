@@ -1,0 +1,52 @@
+.rewards-container {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-align: center;
+    max-width: 600px;
+    margin: 10px auto;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .rewards-container h3 {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #616061, #1e1d1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .rewards-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .rewards-container li {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .rewards-container li:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

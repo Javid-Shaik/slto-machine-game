@@ -43,8 +43,8 @@
 
 /* Styles for the no-reward icon */
 .no-reward-icon {
-  width: 80%; /* Responsive size for no-reward icon */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; /* Responsive size for no-reward icon */
+  height: 100%; /* Maintain aspect ratio */
   opacity: 0.5; /* Dimmed for no reward */
   filter: grayscale(100%); /* Grayscale effect for no reward */
 }
@@ -69,7 +69,6 @@
 
 /* For screens with a width of 768px or less (tablets and mobiles) */
 @media (max-width: 768px) {
-  /* Adjust reel container size for smaller screens */
   .reel-container {
     width: 100px; /* Slightly smaller width */
     height: 160px; /* Slightly smaller height */
@@ -80,9 +79,14 @@
     margin: 15px 0;
   }
 
+  .reel-item img {
+    max-height: 100%;
+    height: auto;
+  }
+
   /* Reduce item size within reels */
   .reel-item {
-    height: 80px;
+    height: 10px;
   }
 
 }
@@ -98,7 +102,7 @@
 
   /* Further reduce item size within reels */
   .reel-item {
-    height: 70px;
+    height: 100px;
   }
 
 }
@@ -113,7 +117,7 @@
 
   /* Further reduce reel item size */
   .reel-item {
-    height: 60px;
+    height: 100px;
   }
 
 }
